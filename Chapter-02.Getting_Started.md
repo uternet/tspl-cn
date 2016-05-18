@@ -370,6 +370,7 @@ Since expressions in the first position of a procedure application are evaluated
 重写下面的表达式，使用 let 去除共同的子表达式，以改善代码结构。注意，不要使用任何代数简化。
 
 a. `(+ (- (* 3 a) b) (+ (* 3 a) b))`
+
 b. `(cons (car (list a b c)) (cdr (list a b c)))`
 
 #### 练习 2.4.2
