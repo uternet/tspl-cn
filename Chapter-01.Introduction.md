@@ -6,11 +6,12 @@ Scheme 是一门通用编程语言。它是一门高级语言，它支持对结�
 
 「注：现在最新的是R7RS了，Scheme 被一分为二，分别的 large 和 small. R7RS small已经发布，large 还在制定当中」
 
- 
+早期的一些 Scheme 实现比较低效，然而，现在很多新的基于编译器的实现运行速度和用低级语言（C，汇编）写的程序一样快。 运行时检查可以帮助程序员发现各种错误，但是有时候会拖慢速度，在大多数实现里，这些检查可以被禁用.
 
-Scheme programs are highly portable across versions of the same Scheme implementation on different machines, because machine dependencies are almost completely hidden from the programmer. They are also portable across different implementations because of the efforts of a group of Scheme language designers who have published a series of reports, the "Revised Reports" on Scheme. The most recent, the "Revised6 Report" [24], emphasizes portability through a set of standard libraries and a standard mechanism for defining new portable libraries and top-level programs.
+Scheme 支持很多数据类型（或者对象），包括字符，字符串，符号，列表及向量对象，以及一套完整的数值类型，包括复数，实数还有任意精度的有理数。
 
-Although some early Scheme systems were inefficient and slow, many newer compiler-based implementations are fast, with programs running on par with equivalent programs written in lower-level languages. The relative inefficiency that sometimes remains results from run-time checks that support generic arithmetic and help programmers detect and correct various common programming errors. These checks may be disabled in many implementations.
+存储对象所需要的内存空间是动态分配和保持的，直到对象不再需要，然后自动释放，通常由垃圾收集器定期地回收不再需要的对象所占据的内存空间。简单的原子值，例如小整数，字符，布尔值以及空列表等，通常表示为直接量，因而不会产生分配和回收的开销。
+
 
 Scheme supports many types of data values, or objects, including characters, strings, symbols, lists or vectors of objects, and a full set of numeric data types, including complex, real, and arbitrary-precision rational numbers.
 
