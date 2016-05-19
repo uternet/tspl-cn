@@ -17,7 +17,7 @@ It is necessary for a Scheme implementation to distinguish between core forms an
 The exact set of syntactic forms making up the core of the language is thus subject to debate, although it must be possible to derive all other forms from any set of forms declared to be core forms. The set described here is among the simplest for which this constraint is satisfied.
 
 
-核心语法形式包括顶级定义(define)，常量，变量，过程调用，quote 表达式，lambda 表达式，if 表达式以及 set!表达式。下面的语法表描述了 Scheme 的核心语法术语的定义和表达式。在下面的语法表里，竖线(|)隔开独立的选项（这里理解成逻辑或比较好），一个形式后面跟着星号（*），表示该形式可以出现0个或多个（这里理解成通配符比较好），<variable> 可以是任何 Scheme 标识符。<datum> 可以是任何 Scheme 对象，比如数字，列表，符号或者向量。<boolean>是 #f 或 #t 其中之一，<number>可以是任何数字,<character>可以是任何字符，<string>可以是任意的字符串。我们已经见过数字，字符串，列表，符号，布尔值以及字符串的例子了。See Chapter 6 or the formal syntax description starting on page 455 for more on the object-level syntax of these and other objects.
+核心语法形式包括顶级定义(define)，常量，变量，过程调用，quote 表达式，lambda 表达式，if 表达式以及 set!表达式。下面的语法表描述了 Scheme 的核心语法术语的定义和表达式。在下面的语法表里，竖线(|)隔开独立的选项（这里理解成逻辑或比较好），一个形式后面跟着星号（*），表示该形式可以出现0个或多个（这里理解成通配符比较好），`<variable>` 可以是任何 Scheme 标识符。`<datum>` 可以是任何 Scheme 对象，比如数字，列表，符号或者向量。`<boolean>`是 #f 或 #t 其中之一，`<number>`可以是任何数字,`<character>`可以是任何字符，`<string>`可以是任意的字符串。我们已经见过数字，字符串，列表，符号，布尔值以及字符串的例子了。See Chapter 6 or the formal syntax description starting on page 455 for more on the object-level syntax of these and other objects.
 
 ```
 <程序>			--> <form>*
