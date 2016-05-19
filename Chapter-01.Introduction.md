@@ -1,6 +1,12 @@
-Chapter 1. Introduction
+### Chapter 1. 介绍
 
-Scheme is a general-purpose computer programming language. It is a high-level language, supporting operations on structured data such as strings, lists, and vectors, as well as operations on more traditional data such as numbers and characters. While Scheme is often identified with symbolic applications, its rich set of data types and flexible control structures make it a truly versatile language. Scheme has been employed to write text editors, optimizing compilers, operating systems, graphics packages, expert systems, numerical applications, financial analysis packages, virtual reality systems, and practically every other type of application imaginable. Scheme is a fairly simple language to learn, since it is based on a handful of syntactic forms and semantic concepts and since the interactive nature of most implementations encourages experimentation. Scheme is a challenging language to understand fully, however; developing the ability to use its full potential requires careful study and practice.
+Scheme 是一门通用编程语言。它是一门高级语言，它支持对结构化数据进行操作，比如字符串，列表，向量，以及支持操作更传统的数据，比如数字和字符。Scheme 通常被认为适合于符号计算，丰富的数据类型及灵活的控制结构使它成为一种真正的通用编程语言。Scheme 已经被用于编写文本编辑器，优化编译器，操作系统，图形应用，专家系统，数值计算，金融分析，虚拟现实系统以及几乎所有可能的应用类型。Scheme 是一种相当简单易学的语言，因为它基于很少的语法形式和语意概念，并且大多数实现具备的交互性质，鼓励试验性编程。但是，要充分理解 Scheme 是有挑战性的。要在开发中发挥它的潜力需要仔细的学习及实践。
+
+在不同机器上的相同版本的 Scheme 实现上，Scheme 程序具有高度的可移植性。因为机器的底层细节几乎完全对程序员隐藏。在不同的 Scheme 仍然具备可移植性，因为 Scheme 的实现者们一直在努力完善语言标准(Revised Reports), 最新的语言标准是"Revise<sup>6</sup>Report", 通过一组标准库和一个标准机制来定义新的可移植库和顶级程序来加强可移植性。
+
+「注：现在最新的是R7RS了，Scheme 被一分为二，分别的 large 和 small. R7RS small已经发布，large 还在制定当中」
+
+ 
 
 Scheme programs are highly portable across versions of the same Scheme implementation on different machines, because machine dependencies are almost completely hidden from the programmer. They are also portable across different implementations because of the efforts of a group of Scheme language designers who have published a series of reports, the "Revised Reports" on Scheme. The most recent, the "Revised6 Report" [24], emphasizes portability through a set of standard libraries and a standard mechanism for defining new portable libraries and top-level programs.
 
