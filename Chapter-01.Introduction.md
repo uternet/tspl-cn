@@ -10,16 +10,13 @@ Scheme 是一门通用编程语言。它是一门高级语言，它支持对结�
 
 Scheme 支持很多数据类型（或者对象），包括字符，字符串，符号，列表及向量对象，以及一套完整的数值类型，包括复数，实数还有任意精度的有理数。
 
-存储对象所需要的内存空间是动态分配和保持的，直到对象不再需要，然后自动释放，通常由垃圾收集器定期地回收不再需要的对象所占据的内存空间。简单的原子值，例如小整数，字符，布尔值以及空列表等，通常表示为直接量，因而不会产生分配和回收的开销。
+存储对象所需要的内存空间是动态分配和保持的，直到对象不再需要，然后自动释放，通常由垃圾收集器定期地回收不再需要的对象所占据的内存空间。简单的原子值，例如小整数，字符，布尔值以及空列表等，通常处理成立即数，因而不会产生分配和回收的开销。
+
+Regardless of representation，所有对象都是“first-class”对象；因为它们是无限期保留的，它们可以作为参数传递给一个过程，也可以作为过程的返回值 return 回来，或者通过组合形成新的对象。这是和别的语言最大的差别，其它语言的复合数据，比如数组是静态分配的，而且从来不释放，进入一个代码块分配的空间在退出块时无条件地释放，或者由程序员来自己管理释放。
+
+Scheme 是一种 "call-by-value" 语言，即所谓的传值调用。但是，至少可变对象（可以被修改的对象）的值其实是指针，指向真正的存储地址。这些指针仍然躲在幕后，程序员不需要关注它们。需要理解的是，当一个对象传递给一个过程或者从过程中返回的时候，并不是对象的拷贝。
 
 
-Scheme supports many types of data values, or objects, including characters, strings, symbols, lists or vectors of objects, and a full set of numeric data types, including complex, real, and arbitrary-precision rational numbers.
-
-The storage required to hold the contents of an object is dynamically allocated as necessary and retained until no longer needed, then automatically deallocated, typically by a garbage collector that periodically recovers the storage used by inaccessible objects. Simple atomic values, such as small integers, characters, booleans, and the empty list, are typically represented as immediate values and thus incur no allocation or deallocation overhead.
-
-Regardless of representation, all objects are first-class data values; because they are retained indefinitely, they may be passed freely as arguments to procedures, returned as values from procedures, and combined to form new objects. This is in contrast with many other languages where composite data values such as arrays are either statically allocated and never deallocated, allocated on entry to a block of code and unconditionally deallocated on exit from the block, or explicitly allocated and deallocated by the programmer.
-
-Scheme is a call-by-value language, but for at least mutable objects (objects that can be modified), the values are pointers to the actual storage. These pointers remain behind the scenes, however, and programmers need not be conscious of them except to understand that the storage for an object is not copied when an object is passed to or returned from a procedure.
 
 At the heart of the Scheme language is a small core of syntactic forms from which all other forms are built. These core forms, a set of extended syntactic forms derived from them, and a set of primitive procedures make up the full Scheme language. An interpreter or compiler for Scheme can be quite small and potentially fast and highly reliable. The extended syntactic forms and many primitive procedures can be defined in Scheme itself, simplifying the implementation and increasing reliability.
 
