@@ -16,7 +16,7 @@ Regardless of representation，所有对象都是“first-class”对象；因�
 
 Scheme 是一种 "call-by-value" 语言，即所谓的传值调用。但是，至少可变对象（可以被修改的对象）的值其实是指针，指向真正的存储地址。这些指针仍然躲在幕后，程序员不需要关注它们。需要理解的是，当一个对象传递给一个过程或者从过程中返回的时候，并不是对象的拷贝。
 
-
+  
 
 At the heart of the Scheme language is a small core of syntactic forms from which all other forms are built. These core forms, a set of extended syntactic forms derived from them, and a set of primitive procedures make up the full Scheme language. An interpreter or compiler for Scheme can be quite small and potentially fast and highly reliable. The extended syntactic forms and many primitive procedures can be defined in Scheme itself, simplifying the implementation and increasing reliability.
 
