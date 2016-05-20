@@ -1115,6 +1115,23 @@ abcde => (b c d e)
 
 ![](img/4.gif)
 
-计算出 *0 = ax<sup>2</sup> + bx + c* 的解。在这个函数里，`let`用于单独创建对其它语言而言所必需的变量。开头的三个赋值表达式分别计算公式中的 *-b*,![](img/5.gif), 以及 *2a*。最后两个赋值表达式分别计算两个根。由两个根构成的点对就是`quadratic-formula`的值。例如，*2x<sup>2</sub> - 4x - 6* 的根分别是 *x = 3* 以及 *x = -1*.
+计算出 *0 = ax<sup>2</sup> + bx + c* 的解。在这个函数里，`let`用于单独创建对其它语言而言所必需的变量。开头的三个赋值表达式分别计算公式中的 *-b*, ![](img/5.gif), 以及 *2a*。最后两个赋值表达式分别计算两个根。由两个根构成的点对就是`quadratic-formula`的值。例如，*2x<sup>2</sub> - 4x - 6* 的根分别是 *x = 3* 以及 *x = -1*.
+
+    (quadratic-formula 2 -4 -6) => (3 . -1)
+
+上面的函数可以工作，但是可以用更清晰的方式来实现，不使用赋值
+
+```
+(define quadratic-formula
+  (lambda (a b c)
+    (let ([minusb (- 0 b)]
+          [radical (sqrt (- (* b b) (* 4 (* a c))))]
+          [divisor (* 2 a)])
+      (let ([root1 (/ (+ minusb radical) divisor)]
+            [root2 (/ (+ minusb radical) divisor)])
+        (cons root1 root2)))))
+```
+
+在这个版本里，赋值表达式不见了，然而本质上依然是相同的算法。通过使用两个`let`表达式，更为清晰地表现了`root1`及`root2`与 minusb, radical, divisor 的关系。同样重要的是，the let expressions make clear the lack of dependencies among minusb, radical, and divisor and between root1 and root2.
 
 
