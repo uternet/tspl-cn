@@ -1115,4 +1115,4 @@ abcde => (b c d e)
 
 ![](img/4.gif)
 
-
+ 计算出 *0 = ax<sup>2</sup> + bx + c* 的解。
