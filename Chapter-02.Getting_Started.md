@@ -1134,4 +1134,107 @@ abcde => (b c d e)
 
 在这个版本里，赋值表达式不见了，然而本质上依然是相同的算法。通过使用两个`let`表达式，更为清晰地表现了`root1`及`root2`与 minusb, radical, divisor 的关系。同样重要的是，the let expressions make clear the lack of dependencies among minusb, radical, and divisor and between root1 and root2.
 
+在 Scheme 里，赋值确实有某些用途，要不然，语言就不会支持它了。思考下面这个版本的`cons`，它对自己被调用的次数进行计数，用来计数的变量叫做 `cons-count`。它使用 `set!`来使计数递增。要实现相同的行为，不使用赋值是不行的。
+
+```
+(define kons-count 0)
+(define kons
+  (lambda (x y)
+    (set! kons-count (+ kons-count 1))
+    (cons x y)))
+
+(kons 'a '(b c)) => (a b c)
+kons-count => 1
+(kons 'a (kons 'b (kons 'c '()))) => (a b c)
+kons-count => 4
+```
+
+赋值通常用来实现需要保持内部状态的函数。例如，假设我们需要定义一个函数，当它第一次调用的时候返回0,第二次调用的时候返回1, 第三次调用的时候返回2,依次递增。我们可以使用类似于上面的 `kons` 函数的写法，使用一个全局变量来保存状态：
+
+```
+(define next 0)
+(define count
+  (lambda ()
+    (let ([v next])
+      (set! next (+ next 1))
+      v)))
+
+(count) => 0
+(count) => 1
+```
+
+这个解决方案不是很好，变量`next`是全局可见的，这是没必要的。因为它对所有函数都是可见的，系统里的任何代码都可以改变它的值，可能会在不经意间改变`count`函数的行为。我们可以使用`let`表达式将它绑定在`lambda`表达式的外面，来解决这个问题：
+
+```
+(define count
+  (let ([next 0])
+    (lambda ()
+      (let ([v next])
+        (set! next (+ next 1))
+        v))))
+```
+
+
+使用后一个解决方案可以很容易地同时使用多个计数器，互不干扰。因为每个函数的计数变量都是函数内部的本地变量(这就是所谓的闭包)。下面的函数 `make-counter`每次被调用的时候返回一个新的计数函数（注意，这就是所谓的高阶函数）
+
+```
+(define make-counter
+  (lambda ()
+    (let ([next 0])
+      (lambda ()
+        (let ([v next])
+          (set! next (+ next 1))
+          v)))))
+```
+
+`next`绑定在`make-counter`内部，但是却又处在被 return 的 `lambda`外部，由 `make-counter` “制造”出来的每一个函数都有自己的计数器，互不干扰。
+
+```
+(define count1 (make-counter))
+(define count2 (make-counter))
+
+(count1) => 0
+(count2) => 0
+(count1) => 1
+(count1) => 2
+(count2) => 1
+```
+
+如果一个状态变量需要在多个函数之间共享，但是我们又不希望它是全局可见的，我们可以使用`let`绑定变量，然后使用`set!`使得函数在顶级是可见的。
+
+```
+(define shhh #f)
+(define tell #f)
+(let ([secret 0])
+  (set! shhh
+        (lambda (message)
+          (set! secret message)))
+  (set! tell
+        (lambda ()
+          secret)))
+
+(shhh "sally likes harry")
+(tell) => "sally likes harry"
+secret => exception: variable secret is not bound
+```
+
+「点评：这两个函数真令人惊叹，变魔术一般变出两个函数，而且它们还共享一个共同的变量」
+
+在对变量赋值之前需要先定义，所以，我们先把 `shhh`及`tell`定义成 `#f`。 (Any initial value would do.) We'll see this structure again in Section 3.5 and a better way to structure code like this as a library in Section 3.6.
+
+有时候，保存本地状态是有用的，可以缓存计算结果以及实现惰性求值。only once and only on demand. The procedure lazy below accepts a thunk, or zero-argument procedure, as an argument. Thunks are often used to "freeze" computations that must be delayed for some reason, which is exactly what we need to do in this situation. When passed a thunk t, lazy returns a new thunk that, when invoked, returns the value of invoking t. Once computed, the value is saved in a local variable so that the computation need not be performed again. A boolean flag is used to record whether t has been invoked and its value saved.
+
+```
+(define lazy
+  (lambda (t)
+    (let ([val #f] [flag #f])
+      (lambda ()
+        (if (not flag)
+            (begin (set! val (t))
+                   (set! flag #t)))
+        val))))
+```
+
+这里出现的语法形式`begin`，从左到右求值它的子表达式，返回最后一个子表达式的值。就象 `let`和`lambda`的 body 一样。我们也看到了，`if`表达式的 `else`子句可以省略。只有当`if`表达式的值可以丢弃的时候才应该这样做，在`lazy`函数里就是这个情况。
+
 
