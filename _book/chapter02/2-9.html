@@ -1,0 +1,1680 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>2.9 赋值 · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.0.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../chapter03/" />
+    
+    
+    <link rel="prev" href="2-8.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../preface.html">
+            
+                <a href="../preface.html">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chapter01/">
+            
+                <a href="../chapter01/">
+            
+                    
+                    第一章 介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter01/1-1.html">
+            
+                <a href="../chapter01/1-1.html">
+            
+                    
+                    1.1 Scheme语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../chapter01/1-2.html">
+            
+                <a href="../chapter01/1-2.html">
+            
+                    
+                    1.2 Scheme命名约定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../chapter01/1-3.html">
+            
+                <a href="../chapter01/1-3.html">
+            
+                    
+                    1.2 排版及符号约定
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第二章.入门
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="2-1.html">
+            
+                <a href="2-1.html">
+            
+                    
+                    2.1 同Scheme交互
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="2-2.html">
+            
+                <a href="2-2.html">
+            
+                    
+                    2.2 简单的表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="2-3.html">
+            
+                <a href="2-3.html">
+            
+                    
+                    2.3 Scheme表达式求值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="2-4.html">
+            
+                <a href="2-4.html">
+            
+                    
+                    2.4 变量与Let表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="2-5.html">
+            
+                <a href="2-5.html">
+            
+                    
+                    2.5 Lambda表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="2-6.html">
+            
+                <a href="2-6.html">
+            
+                    
+                    2.6 Top-Level定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="2-7.html">
+            
+                <a href="2-7.html">
+            
+                    
+                    2.7 条件表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="2-8.html">
+            
+                <a href="2-8.html">
+            
+                    
+                    2.8 简单的递归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.9" data-path="2-9.html">
+            
+                <a href="2-9.html">
+            
+                    
+                    2.9 赋值
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../chapter03/">
+            
+                <a href="../chapter03/">
+            
+                    
+                    第三章.进一步探索
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../chapter03/3-1.html">
+            
+                <a href="../chapter03/3-1.html">
+            
+                    
+                    3.1 语法扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../chapter03/3-2.html">
+            
+                <a href="../chapter03/3-2.html">
+            
+                    
+                    3.2 更多的递归
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../chapter03/3-3.html">
+            
+                <a href="../chapter03/3-3.html">
+            
+                    
+                    3.3 Continuations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../chapter03/3-4.html">
+            
+                <a href="../chapter03/3-4.html">
+            
+                    
+                    3.4 Continuation Passing Style
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../chapter03/3-5.html">
+            
+                <a href="../chapter03/3-5.html">
+            
+                    
+                    3.5 内部定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../chapter03/3-6.html">
+            
+                <a href="../chapter03/3-6.html">
+            
+                    
+                    3.6 库
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../chapter04/">
+            
+                <a href="../chapter04/">
+            
+                    
+                    第四章.过程及变量绑定
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../chapter04/4-1.html">
+            
+                <a href="../chapter04/4-1.html">
+            
+                    
+                    4.1 变量引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../chapter04/4-2.html">
+            
+                <a href="../chapter04/4-2.html">
+            
+                    
+                    4.2 Lambda
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../chapter04/4-3.html">
+            
+                <a href="../chapter04/4-3.html">
+            
+                    
+                    4.3 Case-Lambda
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../chapter04/4-4.html">
+            
+                <a href="../chapter04/4-4.html">
+            
+                    
+                    4.4 局部绑定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../chapter04/4-5.html">
+            
+                <a href="../chapter04/4-5.html">
+            
+                    
+                    4.5 多重值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../chapter04/4-6.html">
+            
+                <a href="../chapter04/4-6.html">
+            
+                    
+                    4.6 变量定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../chapter04/4-7.html">
+            
+                <a href="../chapter04/4-7.html">
+            
+                    
+                    4.7 赋值
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../chapter05/">
+            
+                <a href="../chapter05/">
+            
+                    
+                    第五章.控制操作
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../chapter05/5-1.html">
+            
+                <a href="../chapter05/5-1.html">
+            
+                    
+                    5.1 过程应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../chapter05/5-2.html">
+            
+                <a href="../chapter05/5-2.html">
+            
+                    
+                    5.2 序列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../chapter05/5-3.html">
+            
+                <a href="../chapter05/5-3.html">
+            
+                    
+                    5.3 条件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../chapter05/5-4.html">
+            
+                <a href="../chapter05/5-4.html">
+            
+                    
+                    5.4 递归与迭代
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../chapter05/5-5.html">
+            
+                <a href="../chapter05/5-5.html">
+            
+                    
+                    5.5 印射与Folding
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../chapter05/5-6.html">
+            
+                <a href="../chapter05/5-6.html">
+            
+                    
+                    5.6 Continuations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../chapter05/5-7.html">
+            
+                <a href="../chapter05/5-7.html">
+            
+                    
+                    5.7 延迟求值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../chapter05/5-8.html">
+            
+                <a href="../chapter05/5-8.html">
+            
+                    
+                    5.8 多重值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../chapter05/5-9.html">
+            
+                <a href="../chapter05/5-9.html">
+            
+                    
+                    5.9 求值
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../chapter06/">
+            
+                <a href="../chapter06/">
+            
+                    
+                    第六章.操作对象
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../chapter06/6-1.html">
+            
+                <a href="../chapter06/6-1.html">
+            
+                    
+                    6.1 常量与引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../chapter06/6-2.html">
+            
+                <a href="../chapter06/6-2.html">
+            
+                    
+                    6.2 一般的相等与类型谓词
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../chapter06/6-3.html">
+            
+                <a href="../chapter06/6-3.html">
+            
+                    
+                    6.3 列表和对偶
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../chapter06/6-4.html">
+            
+                <a href="../chapter06/6-4.html">
+            
+                    
+                    6.4 数字
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../chapter06/6-5.html">
+            
+                <a href="../chapter06/6-5.html">
+            
+                    
+                    6.5 定点数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../chapter06/6-6.html">
+            
+                <a href="../chapter06/6-6.html">
+            
+                    
+                    6.6 浮点数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../chapter06/6-7.html">
+            
+                <a href="../chapter06/6-7.html">
+            
+                    
+                    6.7 字符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../chapter06/6-8.html">
+            
+                <a href="../chapter06/6-8.html">
+            
+                    
+                    6.8 字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../chapter06/6-9.html">
+            
+                <a href="../chapter06/6-9.html">
+            
+                    
+                    6.9 向量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="../chapter06/6-10.html">
+            
+                <a href="../chapter06/6-10.html">
+            
+                    
+                    6.10 Bytevectors
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="../chapter06/6-11.html">
+            
+                <a href="../chapter06/6-11.html">
+            
+                    
+                    6.11 符号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="../chapter06/6-12.html">
+            
+                <a href="../chapter06/6-12.html">
+            
+                    
+                    6.12 布尔值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13" data-path="../chapter06/6-13.html">
+            
+                <a href="../chapter06/6-13.html">
+            
+                    
+                    6.13 哈希表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14" data-path="../chapter06/6-14.html">
+            
+                <a href="../chapter06/6-14.html">
+            
+                    
+                    6.14 枚举
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../chapter07/">
+            
+                <a href="../chapter07/">
+            
+                    
+                    第七章.输入及输出
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../chapter07/7-1.html">
+            
+                <a href="../chapter07/7-1.html">
+            
+                    
+                    7.1 编码转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../chapter07/7-2.html">
+            
+                <a href="../chapter07/7-2.html">
+            
+                    
+                    7.2 打开文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../chapter07/7-3.html">
+            
+                <a href="../chapter07/7-3.html">
+            
+                    
+                    7.3 标准端口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../chapter07/7-4.html">
+            
+                <a href="../chapter07/7-4.html">
+            
+                    
+                    7.4 字符串及Bytevector端口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../chapter07/7-5.html">
+            
+                <a href="../chapter07/7-5.html">
+            
+                    
+                    7.5 打开定制的端口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../chapter07/7-6.html">
+            
+                <a href="../chapter07/7-6.html">
+            
+                    
+                    7.6 端口操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../chapter07/7-7.html">
+            
+                <a href="../chapter07/7-7.html">
+            
+                    
+                    7.7 输入操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../chapter07/7-8.html">
+            
+                <a href="../chapter07/7-8.html">
+            
+                    
+                    7.8 输出操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="../chapter07/7-9.html">
+            
+                <a href="../chapter07/7-9.html">
+            
+                    
+                    7.9 方便的I/O
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="../chapter07/7-10.html">
+            
+                <a href="../chapter07/7-10.html">
+            
+                    
+                    7.10 文件系统操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.11" data-path="../chapter07/7-11.html">
+            
+                <a href="../chapter07/7-11.html">
+            
+                    
+                    7.11 字符串/Bytevector转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../chapter08/">
+            
+                <a href="../chapter08/">
+            
+                    
+                    第八章.语法扩展
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../chapter08/8-1.html">
+            
+                <a href="../chapter08/8-1.html">
+            
+                    
+                    8.1 关键字绑定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../chapter08/8-2.html">
+            
+                <a href="../chapter08/8-2.html">
+            
+                    
+                    8.2 Syntax-Rules Transformers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../chapter08/8-3.html">
+            
+                <a href="../chapter08/8-3.html">
+            
+                    
+                    8.3 Systax-Case Transformers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../chapter08/8-4.html">
+            
+                <a href="../chapter08/8-4.html">
+            
+                    
+                    8.4 示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../chapter09/">
+            
+                <a href="../chapter09/">
+            
+                    
+                    第九章.记录
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../chapter09/9-1.html">
+            
+                <a href="../chapter09/9-1.html">
+            
+                    
+                    9.1 定义记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../chapter09/9-2.html">
+            
+                <a href="../chapter09/9-2.html">
+            
+                    
+                    9.2 过程接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../chapter09/9-3.html">
+            
+                <a href="../chapter09/9-3.html">
+            
+                    
+                    9.3 检查
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../chapter10/">
+            
+                <a href="../chapter10/">
+            
+                    
+                    第十章.Top-level程序及库
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../chapter10/10-1.html">
+            
+                <a href="../chapter10/10-1.html">
+            
+                    
+                    10.1 标准库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../chapter10/10-2.html">
+            
+                <a href="../chapter10/10-2.html">
+            
+                    
+                    10.2 定义新的库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../chapter10/10-3.html">
+            
+                <a href="../chapter10/10-3.html">
+            
+                    
+                    10.3 Top-Level程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../chapter10/10-4.html">
+            
+                <a href="../chapter10/10-4.html">
+            
+                    
+                    10.4 示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../chapter11/">
+            
+                <a href="../chapter11/">
+            
+                    
+                    第十一章.异常及条件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../chapter11/11-1.html">
+            
+                <a href="../chapter11/11-1.html">
+            
+                    
+                    11.1 抛出以及处理异常
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../chapter11/11-2.html">
+            
+                <a href="../chapter11/11-2.html">
+            
+                    
+                    11.2 定然条件类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../chapter11/11-3.html">
+            
+                <a href="../chapter11/11-3.html">
+            
+                    
+                    11.3 标准条件类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../chapter12/">
+            
+                <a href="../chapter12/">
+            
+                    
+                    第十二章.扩展示例
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../chapter12/12-1.html">
+            
+                <a href="../chapter12/12-1.html">
+            
+                    
+                    12.1 矩阵和向量乘法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../chapter12/12-2.html">
+            
+                <a href="../chapter12/12-2.html">
+            
+                    
+                    12.2 排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="../chapter12/12-3.html">
+            
+                <a href="../chapter12/12-3.html">
+            
+                    
+                    12.3 一个Set构造器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="../chapter12/12-4.html">
+            
+                <a href="../chapter12/12-4.html">
+            
+                    
+                    12.4 词频计数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.5" data-path="../chapter12/12-5.html">
+            
+                <a href="../chapter12/12-5.html">
+            
+                    
+                    12.5 Scheme打印器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.6" data-path="../chapter12/12-6.html">
+            
+                <a href="../chapter12/12-6.html">
+            
+                    
+                    12.6 格式化输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.7" data-path="../chapter12/12-7.html">
+            
+                <a href="../chapter12/12-7.html">
+            
+                    
+                    12.7 一个Scheme元循环解释器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.8" data-path="../chapter12/12-8.html">
+            
+                <a href="../chapter12/12-8.html">
+            
+                    
+                    12.8 定义抽象对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.9" data-path="../chapter12/12-9.html">
+            
+                <a href="../chapter12/12-9.html">
+            
+                    
+                    12.9 快速傅里叶变换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.10" data-path="../chapter12/12-10.html">
+            
+                <a href="../chapter12/12-10.html">
+            
+                    
+                    12.10 一个合一算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.11" data-path="../chapter12/12-11.html">
+            
+                <a href="../chapter12/12-11.html">
+            
+                    
+                    12.11 多任务引擎
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >2.9 赋值</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="29-&#x8D4B;&#x503C;">2.9 &#x8D4B;&#x503C;</h1>
+<p>&#x867D;&#x7136;&#x5927;&#x591A;&#x6570;&#x7A0B;&#x5E8F;&#x4E0D;&#x9700;&#x8981;&#x7528;&#x5230;&#x8D4B;&#x503C;&#xFF0C;&#x4F46;&#x662F;&#x6709;&#x65F6;&#x5019;&#xFF0C;&#x5BF9;&#x9876;&#x7EA7;&#x53D8;&#x91CF;&#x6216;&#x8005;&#x7531; let&#x3001;lambda &#x7ED1;&#x5B9A;&#x7684;&#x53D8;&#x91CF;&#x8FDB;&#x884C;&#x8D4B;&#x503C;&#x662F;&#x5F88;&#x6709;&#x7528;&#x7684;&#x3002;&#x8D4B;&#x503C;&#x5E76;&#x4E0D;&#x50CF;<code>let</code>&#x6216;<code>lambda</code>&#x4E00;&#x6837;&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x7ED1;&#x5B9A;&#xFF0C;&#x800C;&#x662F;&#x4FEE;&#x6539;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x7684;&#x7ED1;&#x5B9A;&#x3002;&#x8D4B;&#x503C;&#x901A;&#x8FC7;<code>set!</code>&#x6765;&#x8FDB;&#x884C;&#x3002;</p>
+<pre><code>(define abcde &apos;(a b c d e))
+abcde =&gt; (a b c d e)
+(set! abcde (cdr abcde))
+abcde =&gt; (b c d e)
+(let ([abcde &apos;(a b c d e)])
+  (set! abcde (reverse abcde))
+  abcde) =&gt; (e d c b a)
+</code></pre><p>&#x5F88;&#x591A;&#x8BED;&#x8A00;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x8D4B;&#x503C;&#x6765;&#x521D;&#x59CB;&#x5316;&#x672C;&#x5730;&#x53D8;&#x91CF;&#xFF0C;&#x58F0;&#x660E;&#x53D8;&#x91CF;&#x4E0E;&#x7ED1;&#x5B9A;&#x53D8;&#x91CF;&#x662F;&#x5206;&#x5F00;&#x7684;&#x3002;&#x5728; Scheme &#x91CC;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x672C;&#x5730;&#x53D8;&#x91CF;&#x5728;&#x7ED1;&#x5B9A;&#x65F6;&#x7ACB;&#x5373;&#x88AB;&#x8D4B;&#x4E88;&#x4E00;&#x4E2A;&#x503C;&#x3002;Besides making the separate assignment to initialize local variables unnecessary, &#x5B83;&#x786E;&#x4FDD;&#x7A0B;&#x5E8F;&#x5458;&#x4E0D;&#x4F1A;&#x5FD8;&#x8BB0;&#x521D;&#x59CB;&#x5316;&#x5B83;&#x4EEC;&#xFF0C;&#x5728;&#x5927;&#x591A;&#x6570;&#x8BED;&#x8A00;&#x91CC;&#xFF0C;&#x8FD9;&#x662F;&#x5F88;&#x89C9;&#x7684;&#x9519;&#x8BEF;&#x3002;</p>
+<p>&#x4E8B;&#x5B9E;&#x4E0A;&#xFF0C;&#x5BF9;&#x4E8E;&#x5176;&#x5B83;&#x8BED;&#x8A00;&#x662F;&#x5FC5;&#x9700;&#x7684;&#x3001;&#x65B9;&#x4FBF;&#x7684;&#x8D4B;&#x503C;&#xFF0C;&#x5BF9; Scheme &#x800C;&#x8A00;&#x5374;&#x662F;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#xFF0C;&#x4E5F;&#x662F;&#x4E0D;&#x65B9;&#x4FBF;&#x7684;&#x3002;&#x56E0;&#x4E3A;&#xFF0C;&#x901A;&#x5E38;&#x5B58;&#x5728;&#x7740;&#x66F4;&#x6E05;&#x6670;&#x7684;&#x4E0D;&#x4F7F;&#x7528;&#x8D4B;&#x503C;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x8868;&#x8FBE;&#x76F8;&#x540C;&#x7684;&#x7B97;&#x6CD5;&#x3002;One common practice in some language is to sequence expression evaluation with a series of assignments, &#x6BD4;&#x5982;&#xFF0C;&#x4E0B;&#x9762;&#x7684;&#x51FD;&#x6570;&#x8BA1;&#x7B97;&#x4E00;&#x4E2A;&#x4E8C;&#x6B21;&#x65B9;&#x7A0B;&#x7684;&#x6839;</p>
+<pre><code>(define quadratic-formula
+  (lambda (a b c)
+    (let ([root1 0] [root2 0] [minusb 0] [radical 0] [divisor 0])
+      (set! minusb (- 0 b))
+      (set! radical (sqrt (- (* b b) (* 4 (* a c)))))
+      (set! divisor (* 2 a))
+      (set! root1 (/ (+ minusb radical) divisor))
+      (set! root2 (/ (- minusb radical) divisor))
+      (cons root1 root2))))
+</code></pre><p>&#x6839;&#x7684;&#x8BA1;&#x7B97;&#x4F9D;&#x636E;&#x4E8C;&#x6B21;&#x65B9;&#x7A0B;&#x516C;&#x5F0F;</p>
+<p><img src="img/4.gif" alt=""></p>
+<p>&#x8BA1;&#x7B97;&#x51FA; <em>0 = ax<sup>2</sup> + bx + c</em> &#x7684;&#x89E3;&#x3002;&#x5728;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x91CC;&#xFF0C;<code>let</code>&#x7528;&#x4E8E;&#x5355;&#x72EC;&#x521B;&#x5EFA;&#x5BF9;&#x5176;&#x5B83;&#x8BED;&#x8A00;&#x800C;&#x8A00;&#x6240;&#x5FC5;&#x9700;&#x7684;&#x53D8;&#x91CF;&#x3002;&#x5F00;&#x5934;&#x7684;&#x4E09;&#x4E2A;&#x8D4B;&#x503C;&#x8868;&#x8FBE;&#x5F0F;&#x5206;&#x522B;&#x8BA1;&#x7B97;&#x516C;&#x5F0F;&#x4E2D;&#x7684; <em>-b</em>, <img src="img/5.gif" alt="">, &#x4EE5;&#x53CA; <em>2a</em>&#x3002;&#x6700;&#x540E;&#x4E24;&#x4E2A;&#x8D4B;&#x503C;&#x8868;&#x8FBE;&#x5F0F;&#x5206;&#x522B;&#x8BA1;&#x7B97;&#x4E24;&#x4E2A;&#x6839;&#x3002;&#x7531;&#x4E24;&#x4E2A;&#x6839;&#x6784;&#x6210;&#x7684;&#x70B9;&#x5BF9;&#x5C31;&#x662F;<code>quadratic-formula</code>&#x7684;&#x503C;&#x3002;&#x4F8B;&#x5982;&#xFF0C;<em>2x<sup>2</sup> - 4x - 6</em> &#x7684;&#x6839;&#x5206;&#x522B;&#x662F; <em>x = 3</em> &#x4EE5;&#x53CA; <em>x = -1</em>.</p>
+<pre><code>(quadratic-formula 2 -4 -6) =&gt; (3 . -1)
+</code></pre><p>&#x4E0A;&#x9762;&#x7684;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x5DE5;&#x4F5C;&#xFF0C;&#x4F46;&#x662F;&#x53EF;&#x4EE5;&#x7528;&#x66F4;&#x6E05;&#x6670;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x5B9E;&#x73B0;&#xFF0C;&#x4E0D;&#x4F7F;&#x7528;&#x8D4B;&#x503C;</p>
+<pre><code>(define quadratic-formula
+  (lambda (a b c)
+    (let ([minusb (- 0 b)]
+          [radical (sqrt (- (* b b) (* 4 (* a c))))]
+          [divisor (* 2 a)])
+      (let ([root1 (/ (+ minusb radical) divisor)]
+            [root2 (/ (+ minusb radical) divisor)])
+        (cons root1 root2)))))
+</code></pre><p>&#x5728;&#x8FD9;&#x4E2A;&#x7248;&#x672C;&#x91CC;&#xFF0C;&#x8D4B;&#x503C;&#x8868;&#x8FBE;&#x5F0F;&#x4E0D;&#x89C1;&#x4E86;&#xFF0C;&#x7136;&#x800C;&#x672C;&#x8D28;&#x4E0A;&#x4F9D;&#x7136;&#x662F;&#x76F8;&#x540C;&#x7684;&#x7B97;&#x6CD5;&#x3002;&#x901A;&#x8FC7;&#x4F7F;&#x7528;&#x4E24;&#x4E2A;<code>let</code>&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x66F4;&#x4E3A;&#x6E05;&#x6670;&#x5730;&#x8868;&#x73B0;&#x4E86;<code>root1</code>&#x53CA;<code>root2</code>&#x4E0E; minusb, radical, divisor &#x7684;&#x5173;&#x7CFB;&#x3002;&#x540C;&#x6837;&#x91CD;&#x8981;&#x7684;&#x662F;&#xFF0C;the let expressions make clear the lack of dependencies among minusb, radical, and divisor and between root1 and root2.</p>
+<p>&#x5728; Scheme &#x91CC;&#xFF0C;&#x8D4B;&#x503C;&#x786E;&#x5B9E;&#x6709;&#x67D0;&#x4E9B;&#x7528;&#x9014;&#xFF0C;&#x8981;&#x4E0D;&#x7136;&#xFF0C;&#x8BED;&#x8A00;&#x5C31;&#x4E0D;&#x4F1A;&#x652F;&#x6301;&#x5B83;&#x4E86;&#x3002;&#x601D;&#x8003;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;&#x7248;&#x672C;&#x7684;<code>cons</code>&#xFF0C;&#x5B83;&#x5BF9;&#x81EA;&#x5DF1;&#x88AB;&#x8C03;&#x7528;&#x7684;&#x6B21;&#x6570;&#x8FDB;&#x884C;&#x8BA1;&#x6570;&#xFF0C;&#x7528;&#x6765;&#x8BA1;&#x6570;&#x7684;&#x53D8;&#x91CF;&#x53EB;&#x505A; <code>cons-count</code>&#x3002;&#x5B83;&#x4F7F;&#x7528; <code>set!</code>&#x6765;&#x4F7F;&#x8BA1;&#x6570;&#x9012;&#x589E;&#x3002;&#x8981;&#x5B9E;&#x73B0;&#x76F8;&#x540C;&#x7684;&#x884C;&#x4E3A;&#xFF0C;&#x4E0D;&#x4F7F;&#x7528;&#x8D4B;&#x503C;&#x662F;&#x4E0D;&#x884C;&#x7684;&#x3002;</p>
+<pre><code>(define kons-count 0)
+(define kons
+  (lambda (x y)
+    (set! kons-count (+ kons-count 1))
+    (cons x y)))
+
+(kons &apos;a &apos;(b c)) =&gt; (a b c)
+kons-count =&gt; 1
+(kons &apos;a (kons &apos;b (kons &apos;c &apos;()))) =&gt; (a b c)
+kons-count =&gt; 4
+</code></pre><p>&#x8D4B;&#x503C;&#x901A;&#x5E38;&#x7528;&#x6765;&#x5B9E;&#x73B0;&#x9700;&#x8981;&#x4FDD;&#x6301;&#x5185;&#x90E8;&#x72B6;&#x6001;&#x7684;&#x51FD;&#x6570;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x5F53;&#x5B83;&#x7B2C;&#x4E00;&#x6B21;&#x8C03;&#x7528;&#x7684;&#x65F6;&#x5019;&#x8FD4;&#x56DE;0,&#x7B2C;&#x4E8C;&#x6B21;&#x8C03;&#x7528;&#x7684;&#x65F6;&#x5019;&#x8FD4;&#x56DE;1, &#x7B2C;&#x4E09;&#x6B21;&#x8C03;&#x7528;&#x7684;&#x65F6;&#x5019;&#x8FD4;&#x56DE;2,&#x4F9D;&#x6B21;&#x9012;&#x589E;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7C7B;&#x4F3C;&#x4E8E;&#x4E0A;&#x9762;&#x7684; <code>kons</code> &#x51FD;&#x6570;&#x7684;&#x5199;&#x6CD5;&#xFF0C;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x6765;&#x4FDD;&#x5B58;&#x72B6;&#x6001;&#xFF1A;</p>
+<pre><code>(define next 0)
+(define count
+  (lambda ()
+    (let ([v next])
+      (set! next (+ next 1))
+      v)))
+
+(count) =&gt; 0
+(count) =&gt; 1
+</code></pre><p>&#x8FD9;&#x4E2A;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x4E0D;&#x662F;&#x5F88;&#x597D;&#xFF0C;&#x53D8;&#x91CF;<code>next</code>&#x662F;&#x5168;&#x5C40;&#x53EF;&#x89C1;&#x7684;&#xFF0C;&#x8FD9;&#x662F;&#x6CA1;&#x5FC5;&#x8981;&#x7684;&#x3002;&#x56E0;&#x4E3A;&#x5B83;&#x5BF9;&#x6240;&#x6709;&#x51FD;&#x6570;&#x90FD;&#x662F;&#x53EF;&#x89C1;&#x7684;&#xFF0C;&#x7CFB;&#x7EDF;&#x91CC;&#x7684;&#x4EFB;&#x4F55;&#x4EE3;&#x7801;&#x90FD;&#x53EF;&#x4EE5;&#x6539;&#x53D8;&#x5B83;&#x7684;&#x503C;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x5728;&#x4E0D;&#x7ECF;&#x610F;&#x95F4;&#x6539;&#x53D8;<code>count</code>&#x51FD;&#x6570;&#x7684;&#x884C;&#x4E3A;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>let</code>&#x8868;&#x8FBE;&#x5F0F;&#x5C06;&#x5B83;&#x7ED1;&#x5B9A;&#x5728;<code>lambda</code>&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x5916;&#x9762;&#xFF0C;&#x6765;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF1A;</p>
+<pre><code>(define count
+  (let ([next 0])
+    (lambda ()
+      (let ([v next])
+        (set! next (+ next 1))
+        v))))
+</code></pre><p>&#x4F7F;&#x7528;&#x540E;&#x4E00;&#x4E2A;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x53EF;&#x4EE5;&#x5F88;&#x5BB9;&#x6613;&#x5730;&#x540C;&#x65F6;&#x4F7F;&#x7528;&#x591A;&#x4E2A;&#x8BA1;&#x6570;&#x5668;&#xFF0C;&#x4E92;&#x4E0D;&#x5E72;&#x6270;&#x3002;&#x56E0;&#x4E3A;&#x6BCF;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x8BA1;&#x6570;&#x53D8;&#x91CF;&#x90FD;&#x662F;&#x51FD;&#x6570;&#x5185;&#x90E8;&#x7684;&#x672C;&#x5730;&#x53D8;&#x91CF;(&#x8FD9;&#x5C31;&#x662F;&#x6240;&#x8C13;&#x7684;&#x95ED;&#x5305;)&#x3002;&#x4E0B;&#x9762;&#x7684;&#x51FD;&#x6570; <code>make-counter</code>&#x6BCF;&#x6B21;&#x88AB;&#x8C03;&#x7528;&#x7684;&#x65F6;&#x5019;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x8BA1;&#x6570;&#x51FD;&#x6570;&#xFF08;&#x6CE8;&#x610F;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;&#x6240;&#x8C13;&#x7684;&#x9AD8;&#x9636;&#x51FD;&#x6570;&#xFF09;</p>
+<pre><code>(define make-counter
+  (lambda ()
+    (let ([next 0])
+      (lambda ()
+        (let ([v next])
+          (set! next (+ next 1))
+          v)))))
+</code></pre><p><code>next</code>&#x7ED1;&#x5B9A;&#x5728;<code>make-counter</code>&#x5185;&#x90E8;&#xFF0C;&#x4F46;&#x662F;&#x5374;&#x53C8;&#x5904;&#x5728;&#x88AB; return &#x7684; <code>lambda</code>&#x5916;&#x90E8;&#xFF0C;&#x7531; <code>make-counter</code> &#x201C;&#x5236;&#x9020;&#x201D;&#x51FA;&#x6765;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x90FD;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x8BA1;&#x6570;&#x5668;&#xFF0C;&#x4E92;&#x4E0D;&#x5E72;&#x6270;&#x3002;</p>
+<pre><code>(define count1 (make-counter))
+(define count2 (make-counter))
+
+(count1) =&gt; 0
+(count2) =&gt; 0
+(count1) =&gt; 1
+(count1) =&gt; 2
+(count2) =&gt; 1
+</code></pre><p>&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x72B6;&#x6001;&#x53D8;&#x91CF;&#x9700;&#x8981;&#x5728;&#x591A;&#x4E2A;&#x51FD;&#x6570;&#x4E4B;&#x95F4;&#x5171;&#x4EAB;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x53C8;&#x4E0D;&#x5E0C;&#x671B;&#x5B83;&#x662F;&#x5168;&#x5C40;&#x53EF;&#x89C1;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>let</code>&#x7ED1;&#x5B9A;&#x53D8;&#x91CF;&#xFF0C;&#x7136;&#x540E;&#x4F7F;&#x7528;<code>set!</code>&#x4F7F;&#x5F97;&#x51FD;&#x6570;&#x5728;&#x9876;&#x7EA7;&#x662F;&#x53EF;&#x89C1;&#x7684;&#x3002;</p>
+<pre><code>(define shhh #f)
+(define tell #f)
+(let ([secret 0])
+  (set! shhh
+        (lambda (message)
+          (set! secret message)))
+  (set! tell
+        (lambda ()
+          secret)))
+
+(shhh &quot;sally likes harry&quot;)
+(tell) =&gt; &quot;sally likes harry&quot;
+secret =&gt; exception: variable secret is not bound
+</code></pre><p>&#x300C;&#x70B9;&#x8BC4;&#xFF1A;&#x8FD9;&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#x771F;&#x4EE4;&#x4EBA;&#x60CA;&#x53F9;&#xFF0C;&#x53D8;&#x9B54;&#x672F;&#x4E00;&#x822C;&#x53D8;&#x51FA;&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x800C;&#x4E14;&#x5B83;&#x4EEC;&#x8FD8;&#x5171;&#x4EAB;&#x4E00;&#x4E2A;&#x5171;&#x540C;&#x7684;&#x53D8;&#x91CF;&#x300D;</p>
+<p>&#x5728;&#x5BF9;&#x53D8;&#x91CF;&#x8D4B;&#x503C;&#x4E4B;&#x524D;&#x9700;&#x8981;&#x5148;&#x5B9A;&#x4E49;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x6211;&#x4EEC;&#x5148;&#x628A; <code>shhh</code>&#x53CA;<code>tell</code>&#x5B9A;&#x4E49;&#x6210; <code>#f</code>&#x3002; (Any initial value would do.) We&apos;ll see this structure again in Section 3.5 and a better way to structure code like this as a library in Section 3.6.</p>
+<p>&#x6709;&#x65F6;&#x5019;&#xFF0C;&#x4FDD;&#x5B58;&#x672C;&#x5730;&#x72B6;&#x6001;&#x662F;&#x6709;&#x7528;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x7F13;&#x5B58;&#x8BA1;&#x7B97;&#x7ED3;&#x679C;&#x4EE5;&#x53CA;&#x5B9E;&#x73B0;&#x60F0;&#x6027;&#x6C42;&#x503C;&#x3002;only once and only on demand. The procedure lazy below accepts a thunk, or zero-argument procedure, as an argument. Thunks are often used to &quot;freeze&quot; computations that must be delayed for some reason, which is exactly what we need to do in this situation. When passed a thunk t, lazy returns a new thunk that, when invoked, returns the value of invoking t. Once computed, the value is saved in a local variable so that the computation need not be performed again. A boolean flag is used to record whether t has been invoked and its value saved.</p>
+<pre><code>(define lazy
+  (lambda (t)
+    (let ([val #f] [flag #f])
+      (lambda ()
+        (if (not flag)
+            (begin (set! val (t))
+                   (set! flag #t)))
+        val))))
+</code></pre><p>&#x8FD9;&#x91CC;&#x51FA;&#x73B0;&#x7684;&#x8BED;&#x6CD5;&#x5F62;&#x5F0F;<code>begin</code>&#xFF0C;&#x4ECE;&#x5DE6;&#x5230;&#x53F3;&#x6C42;&#x503C;&#x5B83;&#x7684;&#x5B50;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x8FD4;&#x56DE;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5B50;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x503C;&#x3002;&#x5C31;&#x8C61; <code>let</code>&#x548C;<code>lambda</code>&#x7684; body &#x4E00;&#x6837;&#x3002;&#x6211;&#x4EEC;&#x4E5F;&#x770B;&#x5230;&#x4E86;&#xFF0C;<code>if</code>&#x8868;&#x8FBE;&#x5F0F;&#x7684; <code>else</code>&#x5B50;&#x53E5;&#x53EF;&#x4EE5;&#x7701;&#x7565;&#x3002;&#x53EA;&#x6709;&#x5F53;<code>if</code>&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x503C;&#x53EF;&#x4EE5;&#x4E22;&#x5F03;&#x7684;&#x65F6;&#x5019;&#x624D;&#x5E94;&#x8BE5;&#x8FD9;&#x6837;&#x505A;&#xFF0C;&#x5728;<code>lazy</code>&#x51FD;&#x6570;&#x91CC;&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#x60C5;&#x51B5;&#x3002;</p>
+<p>&#x9700;&#x8981;&#x957F;&#x65F6;&#x95F4;&#x8BA1;&#x7B97;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x60F0;&#x6027;&#x6C42;&#x503C;&#x5F88;&#x6709;&#x7528;&#xFF0C;&#x901A;&#x8FC7;&#x5EF6;&#x8FDF;&#x8BA1;&#x7B97;&#xFF0C;&#x6211;&#x4EEC;&#x5B8C;&#x5168;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x8BA1;&#x7B97;&#xFF0C;&#x901A;&#x8FC7;&#x4FDD;&#x5B58;&#x503C;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x91CD;&#x590D;&#x8BA1;&#x7B97;&#x3002;</p>
+<p><code>lazy</code>&#x51FD;&#x6570;&#x7684;&#x64CD;&#x4F5C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4F20;&#x9012;&#x7ED9;&#x5B83;&#x4E00;&#x4E2A;&#x6253;&#x5370;&#x6D88;&#x606F;&#x7684; thunk &#x6765;&#x5F88;&#x597D;&#x5730;&#x8BF4;&#x660E;&#x3002;
+[&#x6CE8;&#xFF1A;&#x5728;&#x51FD;&#x6570;&#x5F0F;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x91CC; thunk &#x8FD9;&#x4E2A;&#x672F;&#x8BED;&#x901A;&#x5E38;&#x8868;&#x793A;&#x6CA1;&#x6709;&#x53C2;&#x6570;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x800C;&#x4E14;&#x901A;&#x5E38;&#x662F;&#x4EE5;&#x533F;&#x540D;&#x51FD;&#x6570;&#x7684;&#x5F62;&#x5F0F;&#x4F20;&#x9012;&#x5230;&#x522B;&#x7684;&#x51FD;&#x6570;&#x91CC;&#x53BB;]</p>
+<pre><code>(define p
+  (lazy (lambda ()
+          (display &quot;Ouch!&quot;)
+          (newline)
+          &quot;got me&quot;)))
+</code></pre><p>&#x5F53;<code>p</code>&#x7B2C;&#x4E00;&#x6B21;&#x88AB;&#x8C03;&#x7528;&#xFF0C;&#x5B83;&#x6253;&#x5370;&#x51FA;&#x6D88;&#x606F; &quot;Ouch!&quot;, &#x7136;&#x540E;&#x8FD4;&#x56DE;&#x5B57;&#x7B26;&#x4E32; &quot;got me&quot;&#x3002;&#x5F53;&#x5B83;&#x518D;&#x6B21;&#x88AB;&#x8C03;&#x7528;&#xFF0C;&#x5C06;&#x4E0D;&#x518D;&#x6253;&#x5370;&#x6D88;&#x606F;&#xFF0C;&#x53EA;&#x662F;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32; &quot;got me&quot;&#x3002;<code>display</code>&#x53CA;<code>newline</code>&#x8FC7;&#x7A0B;&#x662F;&#x6211;&#x4EEC;&#x770B;&#x5230;&#x7684;&#x8F93;&#x5165;/&#x8F93;&#x51FA;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#xFF1B;<code>display</code>&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x6253;&#x5370;&#x6210;&#x4E0D;&#x542B;&#x53CC;&#x5F15;&#x53F7;&#x7684;&#x6837;&#x5B50;&#xFF0C;&#x800C;<code>newline</code>&#x5219;&#x8F93;&#x51FA;&#x4E00;&#x4E2A;&#x6362;&#x884C;&#x7B26;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="2-8.html" class="navigation navigation-prev " aria-label="Previous page: 2.8 简单的递归">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../chapter03/" class="navigation navigation-next " aria-label="Next page: 第三章.进一步探索">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2.9 赋值","level":"1.4.9","depth":2,"next":{"title":"第三章.进一步探索","level":"1.5","depth":1,"path":"chapter03/README.md","ref":"chapter03/README.md","articles":[{"title":"3.1 语法扩展","level":"1.5.1","depth":2,"path":"chapter03/3-1.md","ref":"chapter03/3-1.md","articles":[]},{"title":"3.2 更多的递归","level":"1.5.2","depth":2,"path":"chapter03/3-2.md","ref":"chapter03/3-2.md","articles":[]},{"title":"3.3 Continuations","level":"1.5.3","depth":2,"path":"chapter03/3-3.md","ref":"chapter03/3-3.md","articles":[]},{"title":"3.4 Continuation Passing Style","level":"1.5.4","depth":2,"path":"chapter03/3-4.md","ref":"chapter03/3-4.md","articles":[]},{"title":"3.5 内部定义","level":"1.5.5","depth":2,"path":"chapter03/3-5.md","ref":"chapter03/3-5.md","articles":[]},{"title":"3.6 库","level":"1.5.6","depth":2,"path":"chapter03/3-6.md","ref":"chapter03/3-6.md","articles":[]}]},"previous":{"title":"2.8 简单的递归","level":"1.4.8","depth":2,"path":"chapter02/2-8.md","ref":"chapter02/2-8.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter02/2-9.md","mtime":"2016-05-21T15:36:12.701Z","type":"markdown"},"gitbook":{"version":"3.0.0","time":"2016-05-21T15:46:10.644Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+
+    </body>
+</html>
+
