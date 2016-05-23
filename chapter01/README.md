@@ -32,8 +32,8 @@ Scheme 支持通过 *continuations* 定义任意的控制结构。continuation �
 
 Scheme 允许程序员自己定义新的语法形式（语法扩展），通过编写转换程序，确定每一个新的语法形式如何印射到现在有语法形式。这些转换程序本身和一个自动执行语法检查的高级模式语言本身就用 Scheme 来表示的。转换程序解析输入并重建输出。缺省情况下，转换程序维持词法作用域（卫生宏），但是程序员可以控制宏展开后出现的所有标识符的作用域。语法扩展可以定义出有用的语法结构，比如模仿其它语言里的语法结构，获取内联代码的高效率，甚至用 Scheme 虚拟一整个别的语言。大多数规模比较大的 Scheme 程序都混合使用过程定义及宏定义。
 
-Scheme 从 Lisp 语言进化而来，而且被认为是 Lisp 的方言之一。Scheme 从 Lisp 那里继承了将值作为第一级对象处理的方式，还有几种重要的数据类型，包括符号，列表以及and the representation of programs as objects, among other things. 词法作用域及块结构继承自 Algol 60[[21]](../ref.md)。在 Lisp 的方言中，Scheme 第一个支持词法作用域，块结构，第一级过程，尾递归优化，continuation，以及词法限定的语法扩展（卫生宏）。
+Scheme 从 Lisp 语言进化而来，而且被认为是 Lisp 的方言之一。Scheme 从 Lisp 那里继承了将值作为第一级对象处理的方式，还有几种重要的数据类型，包括符号，列表，and the representation of programs as objects, among other things. 词法作用域及块结构继承自 Algol 60[[21]](../ref.md)。在 Lisp 的方言中，Scheme 第一个支持词法作用域，块结构，第一级过程，尾递归优化，continuation，以及词法限定的语法扩展（卫生宏）。
 
-Common Lisp [[27]](../ref.md) 和 Scheme 是同时代的 Lisp 方言, 并且相互受到对方的影响. 和 Scheme 一样而不同于早期的 Lisp 语言, Common Lisp 采用词法作用域及第一级过程, 尽管 Common Lisp 的宏并不遵守词法作用域。Common Lisp 对过程的求值规则与其它对象的求值规则并不相同，它为过程变量（函数名）维护了一个独立的命名空间，从而限制了将过程作为第一级对象使用。另外，Common Lisp 不支持 continuation 及对尾调用作适当的处理（优化为goto），但是它支持几种 Scheme 中没有的控制结构。两种语言是相似的，Common Lisp 包含更多的专门的结构，while Scheme includes more general-purpose building blocks out of which such constructs (and others) may be built.
+Common Lisp [[27]](../ref.md) 和 Scheme 是同时代的 Lisp 方言, 并且相互受到对方的影响. 和 Scheme 一样而不同于早期的 Lisp 语言, Common Lisp 采用词法作用域及第一级过程, 尽管 Common Lisp 的宏并不遵守词法作用域。Common Lisp 对过程的求值规则与其它对象的求值规则并不相同，它为过程变量（函数名）维护了一个独立的命名空间，从而限制了将过程作为第一级对象使用。另外，Common Lisp 不支持 continuation 及对尾调用作适当的处理（优化为goto, Common Lisp 语言规范并未做此要求，但很多 CL 实现自行提供了尾递归优化支持），但是它支持几种 Scheme 中没有的控制结构。两种语言是相似的，Common Lisp 包含更多的专门的结构，while Scheme includes more general-purpose building blocks out of which such constructs (and others) may be built.
 
 本章剩下的部分描述 Scheme 的语法及命名约定，以及在本书中贯穿使用的排版约定。
