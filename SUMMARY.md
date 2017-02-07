@@ -57,7 +57,7 @@
     * [6.13 哈希表](chapter06/6-13.md)
     * [6.14 枚举](chapter06/6-14.md)
 * [第七章.输入及输出](chapter07/README.md)
-    * [7.1 编码转换](chapter07/7-1.md)
+    * [7.1 代码转换器](chapter07/7-1.md)
     * [7.2 打开文件](chapter07/7-2.md)
     * [7.3 标准端口](chapter07/7-3.md)
     * [7.4 字符串及Bytevector端口](chapter07/7-4.md)
