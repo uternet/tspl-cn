@@ -12,14 +12,13 @@
 
 transcoder同时封装了行结束符样式，用于确定如何识别行结束符。如果 eol-style 为 none，则不识别行尾。6 种其它标准的 eol-style 如下：
 
-```
-lf: 	line-feed character
-cr: 	carriage-return character
-nel: 	Unicode next-line character
-ls: 	Unicode line-separator character
-crlf: 	carriage return followed by line feed, and
+> lf: 	line-feed character  
+cr: 	carriage-return character  
+nel: 	Unicode next-line character  
+ls: 	Unicode line-separator character  
+crlf: 	carriage return followed by line feed, and  
 crnel: 	carriage return followed by next line
-```
+
 
 eol-style 以不同的方式对输入和输出操作产生影响。对于输入，所有的 eol-style（none 除外）使得每个行结束符或两个字符序列被转换为单个的行结束符。对于输出，所有的 eol-style（none 除外）导致单个的行结束符转换成与 eol-style 相关的一个或两个字符序列。在输入方向，所有的 eol-style 是等价的（none 除外），在输出方向，`none` 和 `lf` 是等价的。
 
